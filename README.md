@@ -7,4 +7,4 @@ plot.py makes Fig 2
 plot_monte carlo.py makes Fig 3
 
 The Monte Carlo model was run with a parameter search (see rockgen_tune) and can be more simply run with a single set of parameters (see rockgen).  
-
+The only non-standard python package required to make this work is <A href="https://pypi.org/project/pynverse/">pynverse</a>.
