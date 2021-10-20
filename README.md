@@ -1,7 +1,7 @@
 # MareRockAbundances
 Vanga et al. study of Rock abundance evolution with time
 
-Figs 1-3 of paper
+See also Zenodo archive:
 
 plot.py makes Fig 2
 plot_monte carlo.py makes Fig 3
