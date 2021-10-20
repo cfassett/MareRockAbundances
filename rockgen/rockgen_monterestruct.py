@@ -2,9 +2,10 @@
 import numpy as np
 import pandas as pd
 import copy, random
-from modelparams import *
-
 from math import *
+
+#Separate manually editted parameter file
+from modelparams import *
 
 
 class Crater:
@@ -235,9 +236,7 @@ while (step<steps):
 f.close()
 
 
-
-#sashankdatapath='/users/cfassett/sashank_rockgen_tune/sashankdata.csv'
-sashankdatapath='/users/cfassett/sashank_rockgen_tune/vv'
+sashankdatapath='RA_Data_Interpolated'
 sashdf=pd.read_csv(sashankdatapath)
 modeldf=pd.read_csv(model)
 
@@ -250,7 +249,7 @@ mergeDF['Meansym']=(mergeDF['MeanRA_x']/mergeDF['MeanRA_y']).apply(log).apply(ab
 accuracyagg=mergeDF[['5thsym', '95thsym','Medsym', 'Meansym']]
 acc=exp(np.median(accuracyagg.values.flatten()))-1
 
-g=open("/users/cfassett/scratch/tuneout_thickerI.csv",'a+') 
+g=open("tuneout_thickerI.csv",'a+') 
 wrstr=str(rparam)+","+str(constantexc)+","+str(halflife)+","+str(acc)+"\n"
 g.write(wrstr)
 g.close()
